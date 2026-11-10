@@ -1,5 +1,8 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
+        if(s.length() != t.length()){
+            return false;
+        }
         boolean isAna = true;
         List<Character> list = new ArrayList<>();
         for(int i = 0; i<s.length(); i++){
@@ -12,9 +15,6 @@ class Solution {
                 isAna = false;
                 break;
             }
-        }
-        if(!(list.size() == 0)){
-            isAna = false;
         }
         return isAna;
     }
